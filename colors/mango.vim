@@ -2,14 +2,12 @@
 " Maintainer:   Josh Perez <josh@goatslacker.com>
 " Version: 1.5.1
 
-" mango.vim {{{
   set t_Co=256
   let g:colors_name = "mango"
   let bgcolor = &background
   highlight clear SignColumn
-" }}}
 
-" Colors: {{{
+" Colors:
   if bgcolor == "light"
     let Black = "guifg=#444444 guibg=NONE gui=NONE ctermfg=238 ctermbg=NONE cterm=NONE"
     let Orange = "guifg=#ff5f00 guibg=NONE gui=NONE ctermfg=202 ctermbg=NONE cterm=NONE"
@@ -29,10 +27,9 @@
   let Pink = "guifg=#ff5faf guibg=NONE gui=NONE ctermfg=205 ctermbg=NONE cterm=NONE"
   let Purple = "guifg=#af87ff guibg=NONE gui=NONE ctermfg=141 ctermbg=NONE cterm=NONE"
   let Silver = "guifg=#8a8a8a guibg=NONE gui=NONE ctermfg=245 ctermbg=NONE cterm=NONE"
-  let White = "guifg=#eeeeee guibg=NONE gui=NONE ctermfg=255 ctermbg=NONE cterm=NONE"
-" }}}
+  let White = "guifg=#eeeeee guibg=NONE gui=NONE ctermfg=253 ctermbg=NONE cterm=NONE"
 
-" Light Background: {{{
+" Light Background:
   if bgcolor == "light"
     exe "hi Boolean "         .Red
     exe "hi Constant "        .Purple
@@ -73,8 +70,8 @@
     hi CursorLine   guifg=NONE      guibg=#ffffff   gui=NONE      ctermfg=NONE      ctermbg=231       cterm=NONE
     hi ColorColumn  guifg=#ff0000   guibg=#ffffff   gui=NONE      ctermfg=203       ctermbg=231       cterm=NONE
   endif
-" }}}
-" Dark Background: {{{
+
+" Dark Background:
   if bgcolor == "dark"
     exe "hi Boolean "         .Red
     exe "hi Constant "        .Purple
@@ -112,16 +109,19 @@
     exe "hi Type "            .Orange
     exe "hi TypeDef "         .Orange
 
-    hi CursorLine   guifg=NONE      guibg=#1c1c1c   gui=NONE      ctermfg=NONE      ctermbg=234       cterm=NONE
-    hi ColorColumn  guifg=#ff0000   guibg=#1c1c1c   gui=NONE      ctermfg=203       ctermbg=234       cterm=NONE
+    hi CursorLine   guifg=NONE      guibg=#1c1c1c   gui=NONE   ctermfg=NONE   ctermbg=234   cterm=NONE
+    hi ColorColumn  guifg=#ff0000   guibg=#1c1c1c   gui=NONE   ctermfg=203    ctermbg=234   cterm=NONE
+    hi TabLine      guifg=#333      guibg=#222      gui=none   ctermfg=253    ctermbg=238   cterm=none
+    hi TabLineSel   guifg=#666      guibg=#222      gui=bold   ctermfg=231    ctermbg=235   cterm=bold
+    hi TabLineFill  guifg=#999      guibg=#222      gui=none   ctermfg=253    ctermbg=238   cterm=none
+    hi Directory    ctermfg=222
   endif
-" }}}
 
-hi Error        guifg=#eeeeee   guibg=#ff0000   gui=NONE      ctermfg=255       ctermbg=196       cterm=NONE
+hi Error        guifg=#eeeeee   guibg=#ff0000   gui=NONE      ctermfg=none      ctermbg=none      cterm=NONE
 hi Todo         guifg=#080808   guibg=#ffd700   gui=NONE      ctermfg=232       ctermbg=220       cterm=NONE
 hi Underlined   guifg=NONE      guibg=NONE      gui=underline ctermfg=NONE      ctermbg=NONE      cterm=underline
 
-" MIT LICENSE {{{
+" MIT LICENSE
 " The MIT License (MIT)
 " Copyright 2012 Josh Perez, http://www.goatslacker.com
 "
@@ -130,6 +130,3 @@ hi Underlined   guifg=NONE      guibg=NONE      gui=underline ctermfg=NONE      
 " The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 "
 " THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-" }}}
-
-" vim:foldmethod=marker:foldlevel=0
